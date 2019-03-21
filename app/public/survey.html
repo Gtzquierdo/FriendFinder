@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Friend Finder | Survey</title>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa|PT+Mono" rel="stylesheet">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+<body>
+	<div class="container">
+		<div class="jumbotron" style="background-color: #000;">
+			<div class="title">Lift Finder Survey</div>
+			<div class="slogan">Fill out the survey below to find your new training partner!</div>
+		</div>
+	</div>
+	<div class="survey-container">
+		<form method="POST" action="/data/friends">
+			<div class="subtitle">About You</div>
+				<fieldset class="form-group">
+					<label for="name">Name (Required)</label>
+					<input type="text" class="form-control" placeholder="Your Name" id="name" name="name" required>
+				</fieldset>
+				<fieldset class="form-group">
+					<label for="photo">Photo Link (Required)</label>
+					<input type="text" class="form-control" placeholder="http://flickr.jpg" id="photo" name="photo" required>
+                </fieldset>
+                <fieldset class="form-group">
+                    <label for="Location">Location (Required)</label>
+                    <input type="text" class="form-control" placeholder="Where are you centrally located" id="location" name="location" required>
+                </fieldset>
+			<div class="subtitle">01</div>
+				<fieldset class="form-group">
+					<label for="01">Partner HAS to be Committed to training.</label>
+					<br>
+						<select class="form-control" id="01" name="scores[0]">
+							<option>1 (Strongly Disagree)</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5 (Strongly Agree)</option>
+						</select>
+				</fieldset>
+			<div class="subtitle">02</div>
+				<fieldset class="form-group">
+					<label for="02">Generally speaking, you rely more on your experience than your imagination in the gym.</label>
+					<select class="form-control" id="02" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+			<div class="subtitle">03</div>
+				<fieldset class="form-group">
+					<label for="03">BUILD THE CHEST. (BLEEP) THE REST?</label>
+					<select class="form-control" id="03" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+			<div class="subtitle">04</div>
+				<fieldset class="form-group">
+					<label for="04">Cardio is important to you?</label>
+					<select class="form-control" id="04" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+			<div class="subtitle">05</div>
+				<fieldset class="form-group">
+					<label for="05">Political Correctness important to you?</label>
+					<select class="form-control" id="05" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+			<div class="subtitle">06</div>
+				<fieldset class="form-group">
+					<label for="06">Partner needs to know how to spot and judge lifts.</label>
+					<select class="form-control" id="06" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+			<div class="subtitle">07</div>
+				<fieldset class="form-group">
+					<label for="07">Partner needs to have a Bench over 275lbs.</label>
+					<select class="form-control" id="07" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+			<div class="subtitle">08</div>
+				<fieldset class="form-group">
+					<label for="08">Partner needs to have a Squat over 315lbs.</label>
+					<select class="form-control" id="08" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+			<div class="subtitle">09</div>
+				<fieldset class="form-group">
+					<label for="09">Partner needs to have a deadlift over 365lbs.</label>
+					<select class="form-control" id="09" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+			<div class="subtitle">10</div>
+				<fieldset class="form-group">
+					<label for="10">Wilks score is the only way to know strength. </label>
+					<select class="form-control" id="10" name="scores[0]">
+						<option>1 (Strongly Disagree)</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5 (Strongly Agree)</option>
+					</select>
+				</fieldset>
+				<br/>
+			<input type="submit" class="btn btn-primary" value="Submit Survey" id="submit">
+		</form>
+		<br/><br/>
+
+
+	</div>
+</body>
+</html>
