@@ -1,6 +1,6 @@
 // Dependencies
 var express = require("express");
-path = require("path");
+var path = require("path");
 var bodyParser = require ("body-parser");
 
 // Sets up Express Server
@@ -11,7 +11,7 @@ var PORT = process.env.PORT || 8080;
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
 
-lifters = [];
+var lifters = [];
 
 // Routes:
 require('./app/routing/apiRoutes.js')(app);
