@@ -1,40 +1,56 @@
-var lifterData = require('../data/friends.js');
-module.exports = function(app) {
-    app.get('/api/friends', function(req, res) {
-        res.json(lifterData);
-    })
+var friends = require("../data/friends");
 
-    app.post('/api/friends', function(req, res) {
-        var newLifter = req.body;
-        for (var i = 0; i < newLifter.scores.length; i++) {
-            if(newLifter.scores[i] === "1 (Strongly Disagree)") {
-                newLifter.scores[i] = 1;
-            } else if(newLifter.scores[i] = "5 (Strongly Agree)") {
-                newLifter.scores[i] = 5;
-            } else {
-                newLifter.scores[i] = parseInt(newLifter.scores[i]);
-            }
-        }
-        var differencesArray = [];
-        for (var i = 0; i < lifterData.length; i++) {
-            var compareLifters = lifterData[i];
-            var totalDifference = 0;
-            for (var j = 0; j < compareLifters.scores.length; j++){
-                var diffScore = Math.abs (compareLifters.scores[j] - newLifter.scores[j]);
-                totalDifference += diffScore;
-            }
-            differencesArray[i] = totalDifference;
-        }
-        var bestLifter = differencesArray[0];
-        var bestLifterIndex = 0;
-        for (var i = 1; i < differencesArray.length; i++) {
-            if (differencesArray[i] < bestLifter) {
-                bestLifter = differencesArray[i];
-                bestLifterIndex = i;
-            }
-        }
-        lifterData.push(newLifter);
-        res.json(lifterData[bestLifterIndex]);
-    })
-}
+module.exports = function (app) {
 
+    app.get("/api/friends", function (req, res) {
+        res.json(friends);
+    });
+
+    app.post("/api/friends", function (req, res) {
+
+        var match = {
+            name: "",
+            photo: "",
+            friendDifference: 1000
+        };
+
+        // parse the results
+        var data = req.body;
+        var scores = data.scores;
+
+            // testing
+            console.log(scores);
+
+        // calculate the difference between user's scores and scores of each friend
+        var difference = 0;
+
+        // loop through all
+        for (var i = 0; i < friends.length; i++) {
+
+            console.log(friends[i]);
+            difference = 0;
+
+            // loop through all scores of each
+            for (var j = 0; j < friends.length; j++) {
+
+                // find difference between scores and add them together
+                difference += Math.abs(parseInt(scores[j]) - parseInt(friends[i].scores[j]));
+
+                // if sum of differences is less than the difference of the current
+                if (difference <= match.friendDifference) {
+
+                    // reset
+                    match.name = friends[i].name;
+                    match.photo = friends[i].photo;
+                    match.friendDifference = difference;
+                }
+
+            }
+
+        }
+        // save user's data to the db
+        friends.push(data);
+        // return a JSON object
+        res.json(match);
+    });
+};

@@ -1,153 +1,371 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Friend Finder | Survey</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa|PT+Mono" rel="stylesheet">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Lift Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Script Source Files -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+
 </head>
 <body>
+
 	<div class="container">
-		<div class="jumbotron" style="background-color: #000;">
-			<div class="title">Lift Finder Survey</div>
-			<div class="slogan">Fill out the survey below to find your new training partner!</div>
-		</div>
-	</div>
-	<div class="survey-container">
-		<form method="POST" action="/data/friends">
-			<div class="subtitle">About You</div>
-				<fieldset class="form-group">
-					<label for="name">Name (Required)</label>
-					<input type="text" class="form-control" placeholder="Your Name" id="name" name="name" required>
-				</fieldset>
-				<fieldset class="form-group">
-					<label for="photo">Photo Link (Required)</label>
-					<input type="text" class="form-control" placeholder="http://flickr.jpg" id="photo" name="photo" required>
-                </fieldset>
-                <fieldset class="form-group">
-                    <label for="Location">Location (Required)</label>
-                    <input type="text" class="form-control" placeholder="Where are you centrally located" id="location" name="location" required>
-                </fieldset>
-			<div class="subtitle">01</div>
-				<fieldset class="form-group">
-					<label for="01">Partner HAS to be Committed to training.</label>
-					<br>
-						<select class="form-control" id="01" name="scores[0]">
-							<option>1 (Strongly Disagree)</option>
-							<option>2</option>
-							<option>3</option>
-							<option>4</option>
-							<option>5 (Strongly Agree)</option>
-						</select>
-				</fieldset>
-			<div class="subtitle">02</div>
-				<fieldset class="form-group">
-					<label for="02">Generally speaking, you rely more on your experience than your imagination in the gym.</label>
-					<select class="form-control" id="02" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-			<div class="subtitle">03</div>
-				<fieldset class="form-group">
-					<label for="03">BUILD THE CHEST. (BLEEP) THE REST?</label>
-					<select class="form-control" id="03" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-			<div class="subtitle">04</div>
-				<fieldset class="form-group">
-					<label for="04">Cardio is important to you?</label>
-					<select class="form-control" id="04" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-			<div class="subtitle">05</div>
-				<fieldset class="form-group">
-					<label for="05">Political Correctness important to you?</label>
-					<select class="form-control" id="05" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-			<div class="subtitle">06</div>
-				<fieldset class="form-group">
-					<label for="06">Partner needs to know how to spot and judge lifts.</label>
-					<select class="form-control" id="06" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-			<div class="subtitle">07</div>
-				<fieldset class="form-group">
-					<label for="07">Partner needs to have a Bench over 275lbs.</label>
-					<select class="form-control" id="07" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-			<div class="subtitle">08</div>
-				<fieldset class="form-group">
-					<label for="08">Partner needs to have a Squat over 315lbs.</label>
-					<select class="form-control" id="08" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-			<div class="subtitle">09</div>
-				<fieldset class="form-group">
-					<label for="09">Partner needs to have a deadlift over 365lbs.</label>
-					<select class="form-control" id="09" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-			<div class="subtitle">10</div>
-				<fieldset class="form-group">
-					<label for="10">Wilks score is the only way to know strength. </label>
-					<select class="form-control" id="10" name="scores[0]">
-						<option>1 (Strongly Disagree)</option>
-						<option>2</option>
-						<option>3</option>
-						<option>4</option>
-						<option>5 (Strongly Agree)</option>
-					</select>
-				</fieldset>
-				<br/>
-			<input type="submit" class="btn btn-primary" value="Submit Survey" id="submit">
-		</form>
-		<br/><br/>
+        <!-- header text -->
+		<br><br>
+
+		<h2 style="color:greenyellow">Fill out the survey below to find your new training partner!</h2>
+
+        <hr>
+
+        <h3 style="color:greenyellow">About You</h3>
+
+        <h4>Your Name (Required)</h4>
+        <input type="text" id="name" class="form-control col-md-6" required>
+
+        <h4>Link to Your Photo (Required)</h4>
+		<input type="text" id="photo" class="form-control col-md-6" required>
+
+        <hr>
+
+        <!-- Question 1 Presentation: text + button-->
+        <h4>
+            <strong>Question 1</strong>
+        </h4>
+        <h5>Partner HAS to be Committed to training.</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q1">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q1">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 2 Presentation: text + button-->
+        <h4>
+            <strong>Question 2</strong>
+        </h4>
+        <h5>Generally speaking, you rely more on your experience than your imagination in the gym.</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q2">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q2">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 3 Presentation: text + button-->
+        <h4>
+            <strong>Question 3</strong>
+        </h4>
+        <h5>BUILD THE CHEST. (BLEEP) THE REST?</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q3">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q3">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 4 Presentation: text + button-->
+        <h4>
+            <strong>Question 4</strong>
+        </h4>
+        <h5>Cardio is important to you?</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q4">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q4">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 5 Presentation: text + button-->
+        <h4>
+            <strong>Question 5</strong>
+        </h4>
+        <h5>Political Correctness important to you?</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q5">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q5">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 6 Presentation: text + button-->
+        <h4>
+            <strong>Question 6</strong>
+        </h4>
+        <h5>Partner needs to know how to spot and judge lifts.</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q6">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q6">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 7 Presentation: text + button-->
+        <h4>
+            <strong>Question 7</strong>
+        </h4>
+        <h5>Partner needs to have a Bench over 275lbs</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q7">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q7">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 8 Presentation: text + button-->
+        <h4>
+            <strong>Question 8</strong>
+        </h4>
+        <h5>Partner needs to have a Squat over 315lbs.</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q8">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q8">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 9 Presentation: text + button-->
+        <h4>
+            <strong>Question 9</strong>
+        </h4>
+        <h5>Partner needs to have a deadlift over 365lbs.</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q9">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q9">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Question 10 Presentation: text + button-->
+        <h4>
+            <strong>Question 10</strong>
+        </h4>
+        <h5>Wilks score is the only way to know strength.</h5>
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="q10">Select an Option...</label>
+            </div>
+
+            <select class="custom-select col-md-3" id="q10">
+                <option selected>Choose...</option>
+                <option value="1">1 (Strongly Disagree)</a>
+                <option value="2">2</a>
+                <option value="3">3</a>
+                <option value="4">4</a>
+                <option value="5">5 (Strongly Agree)</a>
+            </select>
+        </div> <!-- end of div dropdown-->
+
+        <br>
+
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-default btn-lg btn-block" id="submit">Submit</button>
+
+        <hr>
+
+    <br><br>
+    <!-- start of footer -->
+    <footer class="footer">
+        <div>
+            <p>
+                <a href="/api/friends">API Lifters List</a> | <a href="https://github.com/Gtzquierdo/FriendFinder" target="_blank">Github Repo</a>
+            </p>
+        </div>
+
+    </footer> <!-- end of footer-->
+
+    </div> <!-- end of container -->
 
 
-	</div>
+    <div class="modal" tabindex="-1" role="dialog" id="resultsModal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Your Training Partner is...</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                <h2 id="matchName"></h2>
+                <img id="matchImage" src="" alt="friend">
+            </div>
+            <div class="modal-footer">
+				<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
 </body>
+
+    <!-- javascript -->
+<script>
+	// get all user inputs when user clicks on 'submit' button
+	$("#submit").on("click", function () {
+		function validateForm () {
+			var isValid = true;
+			$(".form-control").each(function() {
+				if ($(this).val() === "") {
+					isValid = false;
+				}
+			});
+			$(".custom-select").each(function () {
+				if ($(this).val() === "") {
+					isValid = false;
+				}
+			});
+			return isValid;
+		}
+		// if all required fields are completed
+		if (validateForm ()) {
+			// create an object for the user's inputs
+			var userData = {
+				name: $("#name").val(),
+				photo: $("#photo").val(),
+				scores: [
+					$("#q1").val(),
+					$("#q2").val(),
+					$("#q3").val(),
+					$("#q4").val(),
+					$("#q5").val(),
+					$("#q6").val(),
+					$("#q7").val(),
+					$("#q8").val(),
+					$("#q9").val(),
+					$("#q10").val()
+				]
+			};
+			// store URL of the website
+			var currentURL = window.location.origin;
+			// use AJAX to post the data to the friends API
+			$.post(currentURL + "/api/friends", userData, function (data) {
+				// get result of AJAX post to display match object
+				$("#matchName").text(data.name);
+				$("#matchImage").attr("src",data.photo)
+				// show the modal
+				$("#resultsModal").modal("toggle");
+			});
+		}
+		else {
+			alert("Please complete all of the fields to find your new training partner!")
+		}
+		return false;
+	});
+</script>
+
 </html>

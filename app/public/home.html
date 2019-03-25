@@ -1,22 +1,67 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Lift Finder | Home</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Comfortaa|PT+Mono" rel="stylesheet">
-	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Friend Finder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- CSS background -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Script Source Files -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.5.0/js/all.js"></script>
+
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron" style="background-color: #000;">
-			<div class="title">Lift Finder</div>
-			<div class="slogan">Complete the survey and find a training partner compatible to you!</div>
-		</div>
-		<br/>
-		<button><i class="fa fa-pencil survey-button" aria-hidden="true"> Click Here to Start Survey</i></button>
-	</div>
+
+    <div class="container">
+
+        <br><br>
+
+        <div class="jumbotron">
+
+            <!-- header text -->
+            <h1>Training Partner Finder</h1>
+
+            <hr>
+
+            <h2>Let's find your next Training Partner. Answer a few questions.</h2>
+
+            <h2>Then find the training partner with the greatest compatibility!</h2>
+
+            <br>
+
+            <!-- area for survey button -->
+            <div>
+                <a href="/survey">
+                    <button type="button" class="btn btn-lg btn-primary">
+                        <i class="far fa-list-alt"></i>
+                        Go to Survey
+                    </button>
+                </a>
+            </div> <!-- end of button div-->
+
+        </div> <!-- end of jumbotron -->
+
+    <!-- start of footer -->
+    <footer class="footer">
+        <div>
+            <p>
+                <a href="/api/friends">API Lifters List</a> | <a href="https://github.com/Gtzquierdo/FriendFinder" target="_blank">Github Repo</a>
+            </p>
+        </div>
+
+    </footer> <!-- end of footer container-->
+
+    </div> <!-- end of container -->
+
+
 </body>
 </html>

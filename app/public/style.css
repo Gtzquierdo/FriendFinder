@@ -1,34 +1,12 @@
-.title{
-	text-align: center;
-	font-family: "Comfortaa";
-	font-size: 500%;
-	color: #fff;
+body {
+	background-image: url('http://ironsoulgym.com/wp-content/uploads/2015/07/8D6A0277.jpg');
+	background-size: cover;
+	background-position: center;
+}
+h4 {
+    color: white;
 }
 
-.slogan{
-	text-align: center;
-	font-family: "PT Mono";
-	font-size: 150%;
-	text-transform: uppercase;
-	color: #fff;
-}
-
-.survey-button{
-	text-align: center;
-	font-family: "PT Mono";
-	font-size: 120%;
-	text-transform: uppercase;
-}
-
-.subtitle{
-	text-align: center;
-	font-family: "Comfortaa";
-	font-size: 200%;
-	font-weight: bold;
-}
-
-.survey-container{
-	width: 50%;
-	margin-left: 25%;
-	text-align: center;
+h5 {
+	color:greenyellow;
 }
