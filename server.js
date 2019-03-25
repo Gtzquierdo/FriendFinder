@@ -6,7 +6,7 @@ var bodyParser = require("body-parser");
 // EXPRESS CONFIGURATION
 var app = express();
 
-// Sets an initial port. We"ll use this later in our listener
+// Sets an initial port
 var PORT = process.env.PORT || 8081;
 
 app.use(express.static('app/public'));

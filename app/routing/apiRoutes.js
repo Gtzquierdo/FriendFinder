@@ -18,8 +18,7 @@ module.exports = function (app) {
         var data = req.body;
         var scores = data.scores;
 
-            // testing
-            console.log(scores);
+        console.log(scores);
 
         // calculate the difference between user's scores and scores of each friend
         var difference = 0;
@@ -48,7 +47,7 @@ module.exports = function (app) {
             }
 
         }
-        // save user's data to the db
+        // save 
         friends.push(data);
         // return a JSON object
         res.json(match);
