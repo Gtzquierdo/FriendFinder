@@ -15,7 +15,7 @@ var friends = [ {
 	]},
 	{
 	"name" :"Brandon",
-	"photo" :"https://imgur.com/KQdYszp",
+	"photo" :"http://www.jtsstrength.com/wp-content/uploads/2018/01/Brandon-Allen_Still-2.jpg",
 	"scores" :[
 		5,
 		2,
