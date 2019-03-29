@@ -15,7 +15,7 @@ var friends = [ {
 	]},
 	{
 	"name" :"Brandon",
-	"photo" :"http://www.jtsstrength.com/wp-content/uploads/2018/01/Brandon-Allen_Still-2.jpg",
+	"photo" :"https://imgur.com/KQdYszp",
 	"scores" :[
 		5,
 		2,
@@ -27,6 +27,6 @@ var friends = [ {
 		2,
 		8,
 		1
-	]}
+	]},
 ];
 module.exports = friends;
