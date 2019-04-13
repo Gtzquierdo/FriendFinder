@@ -47,7 +47,7 @@ module.exports = function (app) {
             }
 
         }
-        // save 
+        // save
         friends.push(data);
         // return a JSON object
         res.json(match);
